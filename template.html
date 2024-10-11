@@ -970,12 +970,12 @@
 
                 <h3 class="subsection-title">Diagramme d'activités</h3>
                 <div class="activity">
-                    <h4>Titre du diagramme 1</h4>
-                    <img class="activity-diagram" src="images/activity_diagram.svg" alt="Diagramme d'activités">
+                    <h4>Diagramme d'activités pour l'ouverture de l'application</h4>
+                    <img class="activity-diagram" src="diagrammes/ouverture-application.jpg" alt="Diagramme d'activités">
                 </div>
                 <div class="activity">
-                    <h4>Titre du diagramme 2</h4>
-                    <img class="activity-diagram" src="images/activity_diagram.svg" alt="Diagramme d'activités">
+                    <h4>Diagramme d'activités pour la consultation de travaux</h4>
+                    <img class="activity-diagram" src="diagrammes/consultation-travaux.jpg" alt="Diagramme d'activités">
                 </div>
             </section>
 
@@ -985,18 +985,26 @@
                 <div>
                     <h3 class="subsection-title">Risques</h3>
                     <ol class="risks">
-                        <li>Les résidents créent plusieurs requêtes pour le même problème.</li>
-                        <li>Problèmes de sécurité<br>
+                        <li>Redondance des requêtes.<br>
+                        Justification: Si plusieurs résidents créent plusieurs requêtes pour le même problème, cela peut fausser la perception de l’urgence ou de l’importance des autres problèmes dans la ville. Les intervenants peuvent 
+                            décider de négliger d’autres problèmes importants qui n’ont été signalés qu’une fois ou de prioriser de manière erronée des problèmes qui semblent plus fréquents en raison de la redondance des requêtes.<br>
+                        Solution: Plutôt que d'accepter une nouvelle requête identique, l'application peut informer le résident par notifications qu'un problème similaire a déjà été signalé. Il pourrait alors avoir la possibilité de suivre la requête 
+                            existante pour être tenu au courant des mises à jour ou de l’état d’avancement de la résolution du problème. </li>
+                        <li>Problèmes de sécurité.<br>
                         Justification: Si l’application collecte des informations personnelles, comme l'adresse résidentiel, il pourrait y avoir un risque d’atteinte à la vie privée ou de cyberattaques.<br>
                         Solution: Offrir aux utilisateurs la possibilité de personnaliser les autorisations de l’application (accès à la localisation, notifications, données personnelles) et de les modifier à tout moment.</li>
-                        <li></li>
-                        <li></li>
+                        <li>Interface non intuitive.<br>
+                        Justification: Si l'application ne possède pas une interface intuitive et conviviale, les utilisateurs risquent de ne pas vouloir l'utiliser, rendant ainsi l'application inefficace.<br>
+                        Solution: Réaliser plusieurs tests utilisateurs pour comprendre leurs besoins et concevoir une interface simple et conviviale selon leurs préférences. </li>
+                        <li>Application non-disponible à cause d'un manque de connectivité.<br>
+                        Justification: La non-disponibilité de l'application dûe à un manque de connectivité pourrait causer une frustration parmi les utilisateurs.<br>
+                        Solution: Prévoir des fonctionnalités hors-ligne, permettant aux résidents de soumettre des requêtes et de recevoir des informations même sans connexion internet.</li>
                         <li></li>
                     </ol>
                 </div>
 
                 <div>
-                    <h3 class="subsection-title">Besoins non-fonctionnelles</h3>
+                    <h3 class="subsection-title">Besoins non-fonctionnels</h3>
                     <ol class="nf-requirements">
                         <li>Performance: <br>
                             L'application doit être rapide et réactive pour éviter les ralentissements ou les temps de chargement excessifs et ainsi permettre une bonne expérience utilisateur.</li>
