@@ -535,7 +535,7 @@
                     </div>
                     <span>Discord: @tinmarr</span>
                     <a href="mailto:martin.chaperot@umontreal.ca">martin.chaperot@umontreal.ca</a>
-                    <span class="member-role">Chargé de...</span>
+                    <span class="member-role">Chargé des diagrammes d'activités</span>
                 </li>
                 <li class="member">
                     <div class="member-identification">
@@ -706,7 +706,7 @@
 
                 <h3 class="subsection-title">Cas d'utilisation</h3>
                 <div class="use-case">
-                    <img class="use-case-diagram" src="https://github.com/tinmarr/IFT2255-Devoir1-Groupe38/blob/main/MaVille.jpg" alt="Diagramme de cas d'utilisation">
+                    <img class="use-case-diagram" src="diagrammes/MaVille.jpg" alt="Diagramme de cas d'utilisation">
                     <p class="use-case-notes">
                         <em>
                             Notes à propos du diagramme <br>
@@ -1483,17 +1483,17 @@
                         Nous allons utiliser un serveur de base qui peut être hébergé sur un serveur local. Cela nous permettra d’héberger notre application sans avoir à gérer des machines complexes.
 
                             Nous utiliserons une base de données relationnelle SQL (MySQL). La base de données sera donc hébergée directement sur le serveur local.
-                            
+
                             Pour garder cela simple, nous allons stocker les fichiers tels que les images des problèmes signalés sur le système de fichiers local du serveur.
                             Les fichiers pourront être sauvegarder dans un fichier spécifique nommé «téléversements.»
-                            
+
                     </p>
                 </div>
 
                 <div>
                     <h3 class="subsection-title">Solution de stockage</h3>
                     <p>
-                        Pour le stockage, nous utiliserons une <b>base de données relationnelle SQL</b> comme <b>MySQL</b> ou <b>SQLite</b>. Ces bases de données nous permettrons de gérer les entités du (résidents, intervenants, problèmes signalés, requêtes de travail) en utilisant des tables et des relations simples. 
+                        Pour le stockage, nous utiliserons une <b>base de données relationnelle SQL</b> comme <b>MySQL</b> ou <b>SQLite</b>. Ces bases de données nous permettrons de gérer les entités du (résidents, intervenants, problèmes signalés, requêtes de travail) en utilisant des tables et des relations simples.
                     </p><p><ul>
                         <li>Résidents : Une table « résidents » contenant les informations de chaque résident (nom, adresse, email, etc.) .</li>
                         <li>Intervenants : Une table « intervenants » avec les informations des intervenants (nom, métier, etc.) .</li>
@@ -1511,14 +1511,14 @@
                     <li>  « POST /requête » : Pour qu'un intervenant soumette une requête de travail. </li>
                     <li>  « GET /requête » : Pour consulter la liste des requêtes.</li>
                     </ul>
-                    
+
                     </p>
                 </div>
 
                 <div>
                     <h3 class="subsection-title">Solution d'intégration</h3>
 
-                    
+
                     <p>Notre approche d’intégration se concentre sur une architecture de micro-services. Nous utiliserons des API RESTful pour les communications entres les différentes composantes. Nous utiliserons aussi des requêtes API pour récupérer directement les informations de la ville (par exemple, la liste des travaux en cours) sous forme de JSON. Ces données seront stockées ou utilisées directement dans notre système. Des appels à l’API seront réguliers afin d’assurer que le contenu est souvent mis à jour. La gestion du code se fera avec Git. Cela nous permettra de pousser nos modifications manuellement au fur et à mesure de la conception.
                     </p>
 
@@ -1529,9 +1529,9 @@
                 <h2 id="prototype" class="section-title">Prototype</h2>
 
                 <p>
-                    
-                        Instructions pour tester le prototype : 
-                    <ol> <li>Assurez-vous d'avoir Java Development Kit (JDK) installé sur votre système (version 8 ou supérieure).</li> 
+
+                        Instructions pour tester le prototype :
+                    <ol> <li>Assurez-vous d'avoir Java Development Kit (JDK) installé sur votre système (version 8 ou supérieure).</li>
                         <li>Compilez le fichier source Java : javac Main.java</li>
                             <li>Lancez le programme. (java Main)</li>
                                 <li>Au menu principal, vous pouvez : <ol type="a"><li>Vous connecter avec l'un des comptes préconfigurés.</li> <li>Créer un nouveau compte résident.</li> <li>Quitter le programme.</li></ol></li>
