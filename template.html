@@ -283,6 +283,10 @@
                     color: #555;
                 }
 
+                .member-name {
+                    font-weight: bold;
+                }
+
         .report-body {
             display: flex;
         }
@@ -580,11 +584,10 @@
     <header class="report-header">
         <div class="title-section">
             <div>
-                <h1 class="report-title">Rapport du livrable X</h1>
+                <h1 class="report-title">Rapport du livrable <b><em>MaVille</em></b></h1>
                 <p class="report-summary">
-                    <em>Court résumé du rapport</em> &ndash; Ce livrable se concentre sur... 
-                    lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia distinctio tempora quam nulla quod enim. 
-                    Odit eius dolores repellendus incidunt doloribus delectus at ex sunt error, iste dicta, maiores blanditiis.
+                    <em>Court résumé du rapport</em> &ndash; Ce livrable se concentre sur le cadre du projet <em>MaVille</em>, l'analyse de ses exigences et présente un prototype qui permet
+                    de se connecter comme résident ou intervenant ainsi que d'accéder aux divers menus de l'application une fois connectée.
                 </p>
             </div>
 
@@ -600,8 +603,7 @@
         <div class="team-section">
             <h2 class="team-title">Équipe #38</h2>
             <ul class="bare-list members">
-                <li class="member">
-                    <img class="member-pic" src="" alt="" >
+                <li class="member">      
                     <div class="member-identification">
                         <span class="member-name">Martin Chaperot</span>
                         <span class="member-id">2014069</span>
@@ -611,7 +613,6 @@
                     <span class="member-role">Chargé de...</span>
                 </li>
                 <li class="member">
-                    <img class="member-pic" src="" alt="" >
                     <div class="member-identification">
                         <span class="member-name">Jaden Keenan Mbemba</span>
                         <span class="member-id">1034870</span>
@@ -620,8 +621,7 @@
                     <a href="mailto:jaden.che.angelo.keenan-mbemba@umontreal.ca">jaden.che.angelo.keenan-mbemba@umontreal.ca</a>
                     <span class="member-role">Chargé de...</span>
                 </li>
-                <li class="member">
-                    <img class="member-pic" src="" alt="" >
+                <li class="member">   
                     <div class="member-identification">
                         <span class="member-name">Christophe Nguyen</span>
                         <span class="member-id">20283717</span>
@@ -631,7 +631,6 @@
                     <span class="member-role">Chargé de...</span>
                 </li>
                 <li class="member">
-                    <img class="member-pic" src="" alt="" >
                     <div class="member-identification">
                         <span class="member-name">Shermicah Stewart</span>
                         <span class="member-id">2145872</span>
@@ -687,11 +686,11 @@
                 <h3 class="subsection-title">Introduction</h3>
                 <p>
                     <em>
-                        MaVille est une application créée pour les résidents de Montréal dans le but
-                        s'informer sur les entraves causées par les travaux réalisés par la Ville, 
-                        ses partenaires, les promoteurs immobiliers, les entrepreneurs privés et les 
-                        particuliers. Elle permet entre autres de consulter les travaux en cours ou à 
-                        venir et de signaler un problème à la ville.
+                    Le projet MaVille vise à créer une application mobile dédiée à la gestion et à la communication des travaux publics et privés au sein d'une ville. 
+                    Elle permet aux résidents d'accéder en temps réel aux informations sur les travaux en cours ou à venir dans leur quartier, de signaler des problèmes 
+                    d'infrastructure, et de soumettre des requêtes pour des interventions spécifiques. L'application envoie également des notifications personnalisées 
+                    aux utilisateurs concernant les perturbations dans leur zone. De plus, elle facilite la soumission de candidatures par les intervenants pour réaliser 
+                    les travaux demandés par les résidents, offrant ainsi un espace de collaboration entre les citoyens, les entreprises et la municipalité.
                     </em>
                 </p>
                 <h3 class="subsection-title">Échéancier</h3>
@@ -949,7 +948,7 @@
                 <div>
                     <h3 class="subsection-title">Risques</h3>
                     <ol class="risks">
-                        <li>Les résidents créent plusieurs requêtes pour le même probleme</li>
+                        <li>Les résidents créent plusieurs requêtes pour le même problème.</li>
                         <li>Problèmes de sécurité<br>
                         Justification: Si l’application collecte des informations personnelles, comme l'adresse résidentiel, il pourrait y avoir un risque d’atteinte à la vie privée ou de cyberattaques.<br>
                         Solution: Offrir aux utilisateurs la possibilité de personnaliser les autorisations de l’application (accès à la localisation, notifications, données personnelles) et de les modifier à tout moment.</li>
