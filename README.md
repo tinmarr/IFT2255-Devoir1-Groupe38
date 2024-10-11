@@ -8,7 +8,7 @@ Le répertoire `diagrammes` contien les tout diagrammes du projet.
 
 Le fichier `template.html` contien le rapport.
 
-## Prototype de Gestion Urbaine
+## Prototype de Ma Ville
 
 Ce dépôt contient un prototype simplifié de l'application en Java. Le prototype permet aux résidents de s'inscrire, de se connecter et d'accéder à un menu offrant diverses options liées à la gestion de la ville.
 
