@@ -23,11 +23,16 @@ Ce dépôt contient un prototype simplifié de l'application en Java. Le prototy
 4. Exécutez le programme avec : java Main
 5. Au menu principal, vous pouvez :
 
-*Vous connecter avec l'un des comptes préconfigurés.
-*Créer un nouveau compte résident.
-*Quitter le programme.
-*Après la connexion en tant que résident, vous verrez le menu résident avec les options pour signaler un problème, consulter les travaux, etc.
-*Testez chaque option du menu pour vérifier qu'elle affiche le message approprié.
-*Utilisez l'option "Retour au menu principal" pour revenir au menu de connexion/inscription.
+-Vous connecter avec l'un des comptes préconfigurés.
+
+-Créer un nouveau compte résident.
+
+-Quitter le programme.
+
+-Après la connexion en tant que résident, vous verrez le menu résident avec les options pour signaler un problème, consulter les travaux, etc.
+
+-Testez chaque option du menu pour vérifier qu'elle affiche le message approprié.
+
+-Utilisez l'option "Retour au menu principal" pour revenir au menu de connexion/inscription.
 
 _Ce prototype n’est qu’une version abrégée du produit recherché. Il n’y a pas de compte prédéfini ce qui vous permet de naviguer à travers les différentes options du menu sans devoir vous enregistrer réellement._
