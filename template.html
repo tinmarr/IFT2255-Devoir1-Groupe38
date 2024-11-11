@@ -611,7 +611,7 @@
                 <h3 class="subsection-title">Introduction</h3>
                 <p>
                     <em>
-                    Le projet MaVille vise à créer une application mobile dédiée à la gestion et à la communication des travaux publics et privés au sein d'une ville.
+                    Le projet MaVille vise à créer une application dédiée à la gestion et à la communication des travaux publics et privés au sein d'une ville.
                     Elle permet aux résidents d'accéder en temps réel aux informations sur les travaux en cours ou à venir dans leur quartier, de signaler des problèmes
                     d'infrastructure, et de soumettre des requêtes pour des interventions spécifiques. L'application envoie également des notifications personnalisées
                     aux utilisateurs concernant les perturbations dans leur zone. De plus, elle facilite la soumission de candidatures par les intervenants pour réaliser
@@ -675,6 +675,9 @@
 
                 <h3 class="subsection-title">Glossaire</h3>
                 <dl class="glossary">
+                    <dt class="glossary-term">MaVille</dt>
+                    <dd class="glossary-def">Application collaborative permettant notamment aux résidents de consulter les travaux en cours ou à venir, de voir les entraves causées par ceux-ci, de soumettre des requêtes de travaux et de recevoir des notifications sur les interventions en cours dans leur quartier. 
+                        MaVille favorise une meilleure coordination entre les citoyens, la ville et les intervenants, améliorant ainsi la gestion des travaux urbains.</dd>
                     <dt class="glossary-term">Résident</dt>
                     <dd class="glossary-def"> Un individu qui habite dans une zone directement ou indirectement affectée par des travaux de construction, et dont la vie quotidienne (mobilité, accès aux services, environnement)
                                                 peut être influencée par ces interventions.</dd>
@@ -687,7 +690,7 @@
                     <dt class="glossary-term">Intervenant</dt>
                     <dd class="glossary-def"> Un individu ou un groupe officiellement enregistré auprès de la municipalité, doté des compétences et de l'autorisation nécessaires pour mener à bien un projet de travaux au nom de la ville.</dd>
                     <dt class="glossary-term">S'inscrire</dt>
-                    <dd class="glossary-def">Le processus à réaliser pour se connecter en tant que résident ou intervenant.</dd>
+                    <dd class="glossary-def">Le processus à réaliser pour utiliser l'application (Créer un compte) afin de se connecter en tant que résident ou intervenant.</dd>
                     <dt class="glossary-term">Requête</dt>
                     <dd class="glossary-def"> Une demande formelle soumise par un résident via l'application, sollicitant l'exécution de travaux spécifiques dans une zone donnée. Cette requête peut concerner des interventions telles que
                         la réparation d'infrastructures, l'aménagement d'espaces publics, ou d'autres actions d'amélioration du cadre de vie.</dd>
@@ -697,6 +700,8 @@
                         l'espace public.</dd>
                     <dt class="glossary-term">Candidature</dt>
                     <dd class="glossary-def"> Proposition formelle soumise par un intervenant afin de réaliser le projet en réponse à une requête de travaux émise par un résident.</dd>
+                    <dt class="glossary-term">Planification participative</dt>
+                    <dd class="glossary-def">Processus collaboratif où les résidents peuvent fournir des plages horaires préférées pour la réalisation des travaux dans leur quartier et consulter les préférences (plages horaires) des autres résidents.</dd>
                     <dt class="glossary-term">Notifications</dt>
                     <dd class="glossary-def">Messages envoyés par voie numérique, conçus pour tenir les résidents informés en temps réel de tout changement ou évolution concernant les projets de travaux dans leur quartier. Ces alertes
                         permettent aux citoyens de rester au courant des nouvelles interventions, des perturbations potentielles ou des mises à jour importantes liées à leur environnement immédiat.</dd>
@@ -1444,23 +1449,27 @@
                 <div>
                     <h3 class="subsection-title">Risques</h3>
                     <ol class="risks">
-                        <li>Redondance des requêtes.<br>
-                        Justification: Si plusieurs résidents créent plusieurs requêtes pour le même problème, cela peut fausser la perception de l’urgence ou de l’importance des autres problèmes dans la ville. Les intervenants peuvent
-                            décider de négliger d’autres problèmes importants qui n’ont été signalés qu’une fois ou de prioriser de manière erronée des problèmes qui semblent plus fréquents en raison de la redondance des requêtes.<br>
-                        Solution: Plutôt que d'accepter une nouvelle requête identique, l'application peut informer le résident par notifications qu'un problème similaire a déjà été signalé. Il pourrait alors avoir la possibilité de suivre la requête
-                            existante pour être tenu au courant des mises à jour ou de l’état d’avancement de la résolution du problème. </li>
-                        <li>Problèmes de sécurité.<br>
-                        Justification: Si l’application collecte des informations personnelles, comme l'adresse résidentiel, il pourrait y avoir un risque d’atteinte à la vie privée ou de cyberattaques.<br>
-                        Solution: Offrir aux utilisateurs la possibilité de personnaliser les autorisations de l’application (accès à la localisation, notifications, données personnelles) et de les modifier à tout moment.</li>
-                        <li>Interface non intuitive.<br>
-                        Justification: Si l'application ne possède pas une interface intuitive et conviviale, les utilisateurs risquent de ne pas vouloir l'utiliser, rendant ainsi l'application inefficace.<br>
-                        Solution: Réaliser plusieurs tests utilisateurs pour comprendre leurs besoins et concevoir une interface simple et conviviale selon leurs préférences. </li>
-                        <li>Application non-disponible à cause d'un manque de connectivité.<br>
-                        Justification: La non-disponibilité de l'application dûe à un manque de connectivité pourrait causer une frustration parmi les utilisateurs.<br>
-                        Solution: Prévoir des fonctionnalités hors-ligne, permettant aux résidents de soumettre des requêtes et de recevoir des informations même sans connexion Internet.</li>
-                        <li>Absence de feedback sur les requêtes soumises de la part des intervenants.<br>
-                        Justification: Si les utilisateurs ne reçoivent pas de mises à jour sur l'état de leurs requêtes ou des problèmes signalés, ils peuvent penser que leurs demandes n'ont pas été traitées.<br>
-                        Solution: Mettre en place un système de suivi des requêtes avec des notifications régulières pour tenir les résidents informés de l'état d'avancement et des actions en cours.</li>
+                        <li><b style="color:rgb(219, 0, 0);">Redondance des requêtes.</b><br><br>
+                            <b>Justification:</b> Si plusieurs résidents créent plusieurs requêtes pour le même problème, cela peut fausser la perception de l'urgence ou de l'importance des autres problèmes dans la ville. Les intervenants peuvent
+                                décider de négliger d'autres problèmes importants qui n'ont été signalés qu'une fois ou de prioriser de manière erronée des problèmes qui semblent plus fréquents en raison de la redondance des requêtes.<br>
+                            <b style="color:green;">Solution:</b> Plutôt que d'accepter une nouvelle requête identique, l'application peut informer le résident par notifications qu'un problème similaire a déjà été signalé. Il pourrait alors avoir la possibilité de suivre la requête
+                                existante pour être tenu au courant des mises à jour ou de l’état d’avancement de la résolution du problème. </li>
+                                <br>
+                            <li><b style="color:rgb(219, 0, 0);">Vulnérabilité des données personnelles.</b><br><br>
+                            <b>Justification:</b> Si l’application collecte des informations personnelles, comme l'adresse résidentiel, il pourrait y avoir un risque d’atteinte à la vie privée ou de cyberattaques.<br>
+                            <b style="color:green;">Solution:</b> Offrir aux utilisateurs la possibilité de personnaliser les autorisations de l’application (accès à la localisation, notifications, données personnelles) et de les modifier à tout moment.</li>
+                            <br>
+                            <li><b style="color:rgb(219, 0, 0);">Interface non intuitive.</b><br><br>
+                            <b>Justification:</b> Si l'application ne possède pas une interface intuitive et conviviale, les utilisateurs risquent de ne pas vouloir l'utiliser, rendant ainsi l'application inefficace.<br>
+                            <b style="color:green;">Solution:</b> Réaliser plusieurs tests utilisateurs pour comprendre leurs besoins et concevoir une interface simple et conviviale selon leurs préférences. </li>
+                            <br>
+                            <li><b style="color:rgb(219, 0, 0);">Application non-disponible à cause d'un manque de connectivité.</b><br><br>
+                            <b>Justification:</b> La non-disponibilité de l'application dûe à un manque de connectivité pourrait causer une frustration parmi les utilisateurs.<br>
+                            <b style="color:green;">Solution:</b> Prévoir des fonctionnalités hors-ligne, permettant aux résidents de soumettre des requêtes et de recevoir des informations même sans connexion Internet.</li>
+                            <br>
+                            <li><b style="color:rgb(219, 0, 0);">Absence de feedback sur les requêtes soumises de la part des intervenants.</b><br><br>
+                            <b>Justification:</b> Si les utilisateurs ne reçoivent pas de mises à jour sur l'état de leurs requêtes ou des problèmes signalés, ils peuvent penser que leurs demandes n'ont pas été traitées.<br>
+                            <b style="color:green;">Solution:</b> Mettre en place un système de suivi des requêtes avec des notifications régulières pour tenir les résidents informés de l'état d'avancement et des actions en cours.</li>
                     </ol>
                 </div>
 
@@ -1475,8 +1484,8 @@
                             L'application doit être stable et capable de fonctionner de manière continue sans interruption. Elle doit minimiser les risques de plantage et garantir un temps de disponibilité élevé.</li>
                         <li>Sécurité: <br>
                             L'application doit garantir un haut niveau de protection des données personnelles des utilisateurs pour éviter les violations de la confidentialité.</li>
-                        <li>Personnalisation: <br>
-                            L'interface doit être personnalisable afin de permettre à l'utilisateur d'adapter les fonctionnalités de l'application à ses préférences personnelles. Cela contribue à améliorer la satisfaction utilisateur.</li>
+                        <li>Accessibilité: <br>
+                            L'application doit être accessible à divers types d’utilisateurs, y compris ceux ayant des handicaps, en respectant les normes d’accessibilité numérique comme WCAG afin de rendre l'interface utilisable par un large public.</li>
                     </ol>
                 </div>
 
