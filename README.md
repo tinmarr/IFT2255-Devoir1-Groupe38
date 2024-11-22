@@ -8,6 +8,20 @@ Le répertoire `diagrammes` contien les tout diagrammes du projet.
 
 Le fichier `template.html` contien le rapport.
 
+## Implementation de MaVille
+
+### Prérequis
+- JDK 8 ou supérieur
+
+### Exécution
+1. Trouver le fichier `MaVille.jar` dans le répertoire `implementation`.
+2. Exécutez avec `java -jar MaVille.jar`
+
+### Development
+- Compilez depuis le répertoire `implementation/src` avec `javac -cp org.json.jar main/*.java`
+- Exécutez depuis le répertoire `implementation/src` avec `java -cp .:org.json.jar main.Main` (Linux ou Mac) ou `java -cp .;org.json.jar main.Main` (windows) 
+- Compilez le jar depuis le répertoire `implementation/src` avec `jar cfm MaVille.jar MANIFEST.MF main/*.class`
+
 ## Prototype de Ma Ville
 
 Ce dépôt contient un prototype simplifié de l'application en Java. Le prototype permet aux résidents de s'inscrire, de se connecter et d'accéder à un menu offrant diverses options liées à la gestion de la ville.
