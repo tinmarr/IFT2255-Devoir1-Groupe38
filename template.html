@@ -1735,6 +1735,10 @@
                     <img class="sequence-diagram" src="" alt="Diagramme de séquence (Consulter requêtes)">
                 </div>
                 <h3 class="subsection-title">Justification des choix du design</h3>
+                <p>Le design de l’application MaVille repose sur les principes vus en classe pour assuré son évolution et son intégration. L’abstraction a d’abord été utilisée pour diviser le système en plusieurs composantes, soient le Frontend, le Backend et la base de données. 
+                    Cela favorise une meilleure compréhension du système et facilite les mises à jour ou remplacements de modules sans perturber l'ensemble. On a minimisé le couplage en utilisant API REST ce qui permet à chaque module d’évoluer indépendamment. 
+                    De l’autre côté, une forte cohésion a été créé en jumelant des fonctionnalités dans des composants, comme l'authentification ou la gestion des problèmes, afin de maximiser leur efficacité et leur maintenabilité. L'encapsulation des données et des fonctionnalités critiques dans le Backend et la base de données assure la sécurité et limite les risques liés aux dépendances externes. 
+                    Ces choix permettent au système de s'intégrer facilement à des services tiers (comme Google Maps), tout en offrant une base solide pour faire évoluer l'application selon les besoins des utilisateurs.</p>
             </section>
             
             <section class="main-section">
