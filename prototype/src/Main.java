@@ -2,7 +2,7 @@ import java.util.*;
 import java.time.LocalDate;
 import java.time.Period;
 
-class User {
+/*class User {
     protected String fullName;
     protected String email;
     protected String password;
@@ -273,3 +273,4 @@ public class Main {
         }
     }
 }
+*/

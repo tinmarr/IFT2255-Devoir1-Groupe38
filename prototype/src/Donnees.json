@@ -1,0 +1,58 @@
+{
+    "users": [
+      {
+        "id": 1,
+        "fullName": "John Doe",
+        "email": "johndoe@example.com",
+        "password": "password123",
+        "address": "123 Main St, Cityville",
+        "phoneNumber": "123-456-7890",
+        "type": "resident",
+        "dateOfBirth": "1990-01-01",
+        "preferredHours": {
+          "monday": "9:00-17:00",
+          "tuesday": "10:00-16:00",
+          "wednesday": "8:00-14:00",
+          "thursday": "12:00-18:00",
+          "friday": "Off",
+          "saturday": "10:00-14:00",
+          "sunday": "Off"
+        }
+      },
+      {
+        "id": 2,
+        "fullName": "Jane Smith",
+        "email": "janesmith@example.com",
+        "password": "securePass456",
+        "address": "456 Elm St, Townville",
+        "phoneNumber": "987-654-3210",
+        "type": "intervenant"
+      }
+    ],
+    "workRequests": [
+      {
+        "id": 101,
+        "title": "Repair broken fence",
+        "description": "The fence in my backyard needs repair.",
+        "createdBy": 1,
+        "status": "open",
+        "candidatures": [
+          {
+            "intervenantId": 2,
+            "message": "I can complete this within two days.",
+            "status": "submitted"
+          }
+        ],
+        "selectedCandidature": {
+          "intervenantId": 2,
+          "message": "Looking forward to working on this!"
+        },
+        "confirmation": {
+          "confirmedByIntervenant": true,
+          "confirmedDate": "2024-12-20"
+        },
+        "closingDate": null
+      }
+    ]
+  }
+  
