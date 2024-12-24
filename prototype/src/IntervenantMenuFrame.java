@@ -108,21 +108,17 @@ public class IntervenantMenuFrame extends JFrame {
         JPanel panel = new JPanel();
         panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
 
-        JLabel nameLabel = new JLabel("Name:");
-        JTextField nameField = new JTextField(20);
-        JLabel experienceLabel = new JLabel("Experience:");
-        JTextField experienceField = new JTextField(20);
-        JLabel passedJobsLabel = new JLabel("Passed Jobs:");
-        JTextArea passedJobsArea = new JTextArea(10,20);
+        JLabel IdLabel = new JLabel("intervenantId:");
+        JTextField IdField = new JTextField(10);
+        JLabel messageLabel = new JLabel("message:");
+        JTextArea messageArea = new JTextArea(10,20);
         JButton soumettreButton = new JButton("Soumettre");
         JButton retourButton = new JButton("Retour");
 
-        panel.add(nameLabel);
-        panel.add(nameField);
-        panel.add(experienceLabel);
-        panel.add(experienceField);
-        panel.add(passedJobsLabel);
-        panel.add(passedJobsArea);
+        panel.add(IdLabel);
+        panel.add(IdField);
+        panel.add(messageLabel);
+        panel.add(messageArea);
         panel.add(soumettreButton);
         panel.add(retourButton);
 
@@ -155,8 +151,8 @@ public class IntervenantMenuFrame extends JFrame {
         JPanel panel = new JPanel();
         panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
 
-        JLabel nameLabel = new JLabel("Name:");
-        JTextField nameField = new JTextField(20);
+        JLabel IdLabel = new JLabel("Id:");
+        JTextField IdField = new JTextField(20);
         JLabel experienceLabel = new JLabel("Experience:");
         JTextField experienceField = new JTextField(20);
         JLabel passedJobsLabel = new JLabel("Passed Jobs:");
@@ -164,8 +160,8 @@ public class IntervenantMenuFrame extends JFrame {
         JButton soumettreButton = new JButton("Soumettre");
         JButton retourButton = new JButton("Retour");
 
-        panel.add(nameLabel);
-        panel.add(nameField);
+        panel.add(IdLabel);
+        panel.add(IdField);
         panel.add(experienceLabel);
         panel.add(experienceField);
         panel.add(passedJobsLabel);
