@@ -6,6 +6,42 @@ import java.util.List;
 import com.google.gson.Gson;
 import java.io.*;
 
+class Project{
+    private String id;
+    private String title;
+    private String description;
+    private String startDate;
+    private String endDate;
+
+    public Project(String id, String title,String description, String startDate, String endDate){
+        this.id = id;
+        this.title = title;
+        this.description = description;
+        this.startDate = startDate;
+        this.endDate = endDate;
+    }
+
+    public String getId(){
+        return id;
+    }
+
+    public String getTitle(){
+        return title;
+    }
+
+    public String getDescription(){
+        return description;
+    }
+
+    public String getStartDate(){
+        return startDate;
+    }
+
+    public String getEndDate(){
+        return endDate;
+    }
+}
+
 public class IntervenantMenuFrame extends JFrame {
     private List<User> users;   
     private List<Intervenant> intervenants;
@@ -184,9 +220,31 @@ public class IntervenantMenuFrame extends JFrame {
             }
         });
 
+        soumettreButton.addActionListener((new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e){
+                SaveNewProject(IdField.getText(),titleField.getText(),descriptionArea.getText(),startField.getText(),endField.getText());
+            }
+        }));
+
         newFrame.add(panel, BorderLayout.CENTER);
         newFrame.setVisible(true);
 
+    }
+
+    private void SaveNewProject(String id, String title,String description, String startDate, String endDate){
+
+        Project project = new Project(id,title,description,startDate,endDate);
+        // Create a Gson object
+        Gson gson = new Gson();
+
+        try (FileWriter writer = new FileWriter("File.json")){
+            // Convert the object to JSON and write it to the file
+            gson.toJson(project,writer);
+            System.out.println("User data saved to File.json");
+        } catch (IOException e){
+            e.printStackTrace();
+        } 
     }
 
     private void openProjet(){
