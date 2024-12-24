@@ -3,6 +3,8 @@ import java.awt.BorderLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.List;
+import com.google.gson.Gson;
+import java.io.*;
 
 public class IntervenantMenuFrame extends JFrame {
     private List<User> users;   
@@ -144,6 +146,42 @@ public class IntervenantMenuFrame extends JFrame {
     }
 
     private void openSoumettreProj(){
+        
+        JFrame newFrame = new JFrame("Soumettre un projet");
+        newFrame.setSize(400, 300);
+        newFrame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        newFrame.setLayout(new BorderLayout());
+
+        JPanel panel = new JPanel();
+        panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
+
+        JLabel nameLabel = new JLabel("Name:");
+        JTextField nameField = new JTextField(20);
+        JLabel experienceLabel = new JLabel("Experience:");
+        JTextField experienceField = new JTextField(20);
+        JLabel passedJobsLabel = new JLabel("Passed Jobs:");
+        JTextArea passedJobsArea = new JTextArea(10,20);
+        JButton soumettreButton = new JButton("Soumettre");
+        JButton retourButton = new JButton("Retour");
+
+        panel.add(nameLabel);
+        panel.add(nameField);
+        panel.add(experienceLabel);
+        panel.add(experienceField);
+        panel.add(passedJobsLabel);
+        panel.add(passedJobsArea);
+        panel.add(soumettreButton);
+        panel.add(retourButton);
+
+        retourButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                newFrame.dispose(); // Close the new frame
+            }
+        });
+
+        newFrame.add(panel, BorderLayout.CENTER);
+        newFrame.setVisible(true);
 
     }
 
