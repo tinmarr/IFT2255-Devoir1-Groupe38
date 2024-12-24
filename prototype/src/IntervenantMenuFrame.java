@@ -22,25 +22,60 @@ public class IntervenantMenuFrame extends JFrame {
         actionsPanel.setLayout(new BoxLayout(actionsPanel, BoxLayout.Y_AXIS));
 
         JButton buttonRequetes = new JButton("Consulter les requetes de travail");
-        JButton buttonCandidature = new JButton("Soumettre sa candidature");
+        JButton buttonSoumettreCand = new JButton("Soumettre sa candidature");
         JButton buttonSoustraireCand = new JButton("Soustraire sa candidature");
-        JButton buttonSuivi = new JButton("Faire le suivi de sa candidature");
-        JButton buttonProjet = new JButton("Soumettre un projet");
-        JButton buttonModStat = new JButton("Modifier le statut d'un projet");
+        JButton buttonSuiviCand = new JButton("Faire le suivi de sa candidature");
+        JButton bouttonSoumettreProj = new JButton("Soumettre un projet");
+        JButton buttonStatuProj = new JButton("Modifier le statut d'un projet");
 
         actionsPanel.add(buttonRequetes);
-        actionsPanel.add(buttonCandidature);
+        actionsPanel.add(buttonSoumettreCand);
         actionsPanel.add(buttonSoustraireCand);
-        actionsPanel.add(buttonSuivi);
-        actionsPanel.add(buttonProjet);  //notification
-        actionsPanel.add(buttonModStat); //notification
+        actionsPanel.add(buttonSuiviCand);
+        actionsPanel.add(bouttonSoumettreProj);  //notification
+        actionsPanel.add(buttonStatuProj); //notification
 
         add(actionsPanel, BorderLayout.CENTER);
 
         buttonRequetes.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                openSignalerFrame();
+                openNewFrame("Consulter les requetes de travail");
+            }
+        });
+
+        buttonSoumettreCand.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e){
+                openSoumettreCand();
+            }
+        });
+
+        bottonSoustraireCand.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e){
+                SoustraireCand();
+            }
+        });
+
+        buttonSuiviCand.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e){
+                openCandidature();
+            }
+        });
+
+        bouttonSoumettreProj.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                openSoumettreProj();
+            }
+        });
+
+        bouttonStatuProj.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                openProjet();
             }
         });
 
