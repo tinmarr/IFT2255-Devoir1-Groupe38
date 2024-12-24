@@ -81,4 +81,73 @@ public class IntervenantMenuFrame extends JFrame {
 
         setVisible(true);
     }
+
+    private void openNewFrame(String title){
+        JFrame newFrame = new JFrame(title);
+        newFrame.setSize(400,300);
+        newFrame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        newFrame.setLayout(new BorderLayout());
+
+        JButton retourButton = new JButton(title);
+        retourButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e){
+                newFrame.dispose(); //Close the new frame
+            }
+        });
+    }
+
+    private void openSoumettreCand(){
+        JFrame newFrame = new JFrame("Soumettre une candidature");
+        newFrame.setSize(400, 300);
+        newFrame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        newFrame.setLayout(new BorderLayout());
+
+        JPanel panel = new JPanel();
+        panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
+
+        JLabel nameLabel = new JLabel("Name:");
+        JTextField nameField = new JTextField(20);
+        JLabel experienceLabel = new JLabel("Experience:");
+        JTextField experienceField = new JTextField(20);
+        JLabel passedJobsLabel = new JLabel("Passed Jobs:");
+        JTextArea passedJobsArea = new JTextArea(10,20);
+        JButton soumettreButton = new JButton("Soumettre");
+        JButton retourButton = new JButton("Retour");
+
+        panel.add(nameLabel);
+        panel.add(nameField);
+        panel.add(experienceLabel);
+        panel.add(experienceField);
+        panel.add(passedJobsLabel);
+        panel.add(passedJobsArea);
+        panel.add(soumettreButton);
+        panel.add(retourButton);
+
+        retourButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                newFrame.dispose(); // Close the new frame
+            }
+        });
+
+        newFrame.add(panel, BorderLayout.CENTER);
+        newFrame.setVisible(true);
+    }
+
+    private void SoustraireCand(){
+
+    }
+
+    private void openCandidature(){
+
+    }
+
+    private void openSoumettreProj(){
+
+    }
+
+    private void openProjet(){
+
+    }
 }
