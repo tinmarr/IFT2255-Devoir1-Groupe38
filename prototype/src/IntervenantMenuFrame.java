@@ -1,5 +1,7 @@
 import javax.swing.*;
 import java.awt.BorderLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.util.List;
 
 public class IntervenantMenuFrame extends JFrame {
@@ -19,21 +21,29 @@ public class IntervenantMenuFrame extends JFrame {
         JPanel actionsPanel = new JPanel();
         actionsPanel.setLayout(new BoxLayout(actionsPanel, BoxLayout.Y_AXIS));
 
-        JButton action1Button = new JButton("Action 1");
-        JButton action2Button = new JButton("Action 2");
-        JButton action3Button = new JButton("Action 3");
-        JButton action4Button = new JButton("Action 4");
-        JButton action5Button = new JButton("Action 5");
-        JButton action6Button = new JButton("Action 6");
+        JButton buttonRequetes = new JButton("Consulter les requetes de travail");
+        JButton buttonCandidature = new JButton("Soumettre sa candidature");
+        JButton buttonSoustraireCand = new JButton("Soustraire sa candidature");
+        JButton buttonSuivi = new JButton("Faire le suivi de sa candidature");
+        JButton buttonProjet = new JButton("Soumettre un projet");
+        JButton buttonModStat = new JButton("Modifier le statut d'un projet");
 
-        actionsPanel.add(action1Button);
-        actionsPanel.add(action2Button);
-        actionsPanel.add(action3Button);
-        actionsPanel.add(action4Button);
-        actionsPanel.add(action5Button);
-        actionsPanel.add(action6Button);
+        actionsPanel.add(buttonRequetes);
+        actionsPanel.add(buttonCandidature);
+        actionsPanel.add(buttonSoustraireCand);
+        actionsPanel.add(buttonSuivi);
+        actionsPanel.add(buttonProjet);  //notification
+        actionsPanel.add(buttonModStat); //notification
 
         add(actionsPanel, BorderLayout.CENTER);
+
+        buttonRequetes.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                openSignalerFrame();
+            }
+        });
+
         setVisible(true);
     }
 }
