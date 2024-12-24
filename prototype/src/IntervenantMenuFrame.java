@@ -153,19 +153,27 @@ public class IntervenantMenuFrame extends JFrame {
 
         JLabel IdLabel = new JLabel("Id:");
         JTextField IdField = new JTextField(20);
-        JLabel experienceLabel = new JLabel("Experience:");
-        JTextField experienceField = new JTextField(20);
-        JLabel passedJobsLabel = new JLabel("Passed Jobs:");
-        JTextArea passedJobsArea = new JTextArea(10,20);
+        JLabel titleLabel = new JLabel("title:");
+        JTextField titleField = new JTextField(20);
+        JLabel descriptionLabel = new JLabel("description:");
+        JTextArea descriptionArea = new JTextArea(10,20);
+        JLabel startLabel = new JLabel("start date:");
+        JTextField startField = new JTextField(10);
+        JLabel endLabel = new JLabel("end date:");
+        JTextField endField = new JTextField(10);
         JButton soumettreButton = new JButton("Soumettre");
         JButton retourButton = new JButton("Retour");
 
         panel.add(IdLabel);
         panel.add(IdField);
-        panel.add(experienceLabel);
-        panel.add(experienceField);
-        panel.add(passedJobsLabel);
-        panel.add(passedJobsArea);
+        panel.add(titleLabel);
+        panel.add(titleField);
+        panel.add(descriptionLabel);
+        panel.add(descriptionArea);
+        panel.add(startLabel);
+        panel.add(startField);
+        panel.add(endLabel);
+        panel.add(endField);
         panel.add(soumettreButton);
         panel.add(retourButton);
 
