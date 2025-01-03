@@ -89,7 +89,7 @@ public class IntervenantMenuFrame extends JFrame {
             }
         });
 
-        bottonSoustraireCand.addActionListener(new ActionListener() {
+        buttonSoustraireCand.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e){
                 SoustraireCand();
@@ -110,7 +110,7 @@ public class IntervenantMenuFrame extends JFrame {
             }
         });
 
-        bouttonStatuProj.addActionListener(new ActionListener() {
+        buttonStatuProj.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 openProjet();
